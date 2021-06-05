@@ -12,8 +12,8 @@ Usage: ./awsrole.sh <role_arn> [<mfa_code> <source_profile>]
 Example:
 
 ```
-$ awsrole arn:aws:iam::912468240823:role/ep_plyg_access_admin
-Enter MFA code for arn:aws:iam::759342711863:mfa/viljami.kuosmanen:
+$ awsrole arn:aws:iam::<account>:<role name>
+Enter MFA code for arn:aws:iam::<iamaccount>:mfa/awsusername<e.g chinonso.okeke>:
 116509
 ```
 
@@ -22,7 +22,7 @@ Enter MFA code for arn:aws:iam::759342711863:mfa/viljami.kuosmanen:
 Clone this project
 
 ```
-git clone git@gitlab.com:e-pilot/platform/awsrole.git
+git clone git@github.com:cokekep/awsrole-switch.git
 ```
 
 Install the script
@@ -37,8 +37,7 @@ make install
 You can add these to your `.zshrc` / `.bashrc` / `.profile`
 
 ```
-alias awssandbox="source arn:aws:iam::851585377472:role/ep_sand_access_dev"
-alias awsdev="source awsrole arn:aws:iam::912468240823:role/ep_plyg_access_dev"
-alias awsstaging="source awsrole arn:aws:iam::882235782134:role/ep_stag_access_dev"
-alias awsprod="source awsrole arn:aws:iam::893804459037:role/ep_prod_access_dev"
+alias <accountname e.g awsdev>="source arn:aws:iam::<accountID>:role/role name"
+alias <accountname e.g awsstag>="source arn:aws:iam::<accountID>:role/role name"
+alias <accountname e.g awsprod>="source arn:aws:iam::<accountID>:role/role name"
 ```
